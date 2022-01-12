@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Components</title>
-    <script src="tooltip.js"></script>
-</head>
-<body>
-   <p><uc-tooltip text="web">Webcomponents</uc-tooltip> are awesome</p>
-   <p><uc-tooltip>Here we go</uc-tooltip></p>
-</body>
+    <script src="tooltip.js" defer></script>
+    <script src="user-card.js" defer></script>
+    <script src="confirm-links.js" defer></script>
+    <style>
+      h3 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Welcome</h3>
+    <p>
+      <uc-tooltip text="web component">Webcomponents</uc-tooltip> are awesome
+    </p>
+    <p><uc-tooltip>Here we go</uc-tooltip></p>
+    <user-card
+      name="pranjal"
+      avatar="https://randomuser.me/api/portraits/thumb/men/19.jpg"
+    >
+      <div slot="email">abc@gmail.com</div>
+      <div slot="phone">12345</div>
+    </user-card>
+
+    <user-card
+      name="verma"
+      avatar="https://randomuser.me/api/portraits/thumb/women/19.jpg"
+    >
+      <div slot="email">abc@gmail.com</div>
+      <div slot="phone">12345</div>
+    </user-card>
+
+
+
+
+    <user-card
+    name="abc"
+    avatar="https://randomuser.me/api/portraits/thumb/women/19.jpg"
+  >
+    <div slot="email">abc12@gmail.com</div>
+    <div slot="phone">1234512</div>
+  </user-card>
+
+
+  <a  is="uc-confirm-links"href="https://www.google.com">Google</a>
+  </body>
 </html>
